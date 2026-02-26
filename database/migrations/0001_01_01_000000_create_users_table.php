@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('current_tenant_id')->nullable();
+            $table->string('global_status')->default('active');
             $table->rememberToken();
             $table->timestamps();
         });
